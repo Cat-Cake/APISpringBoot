@@ -1,5 +1,7 @@
 package com.student.school.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.util.List;
 
@@ -14,13 +16,14 @@ public class Student {
     private String birthDate;
 
     @ManyToOne
-    @JoinColumn(name = "class_id")
+    @JoinColumn(name = "classe_id")
+    @JsonBackReference
     private Classe classe;
 
-    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "student")
     private List<Grade> grades;
 
-    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "student")
     private List<Absent> absences;
 
     protected Student() {}

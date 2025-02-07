@@ -11,7 +11,7 @@ public class Absent {
     private Long id;
 
     @Temporal(TemporalType.DATE)
-    private Date absenceDate;
+    private Date absentDate;
 
     private String reason;
 
@@ -21,8 +21,8 @@ public class Absent {
 
     protected Absent() {}
 
-    public Absent(Date absenceDate, String reason, Student student) {
-        this.absenceDate = absenceDate;
+    public Absent(Date absentDate, String reason, Student student) {
+        this.absentDate = absentDate;
         this.reason = reason;
         this.student = student;
     }
@@ -30,8 +30,8 @@ public class Absent {
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
-    public Date getAbsenceDate() { return absenceDate; }
-    public void setAbsenceDate(Date absenceDate) { this.absenceDate = absenceDate; }
+    public Date getAbsentDate() { return absentDate; }
+    public void setAbsentDate(Date absentDate) { this.absentDate = absentDate; }
 
     public String getReason() { return reason; }
     public void setReason(String reason) { this.reason = reason; }

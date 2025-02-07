@@ -1,5 +1,6 @@
 package com.student.school.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import java.util.List;
 
@@ -11,7 +12,8 @@ public class Classe {
     private Long id;
     private String name;
 
-    @OneToMany(mappedBy = "classe", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "classe")
+    @JsonManagedReference
     private List<Student> students;
 
     protected Classe() {}
