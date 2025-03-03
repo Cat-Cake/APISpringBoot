@@ -6,4 +6,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository public interface StudentRepository extends JpaRepository<Student, Long> {
 
+	  // public static Student saveStudent(Student student) {
+	//	   return StudentRepository.saveStudent(student);
+	   //}
+	
 }

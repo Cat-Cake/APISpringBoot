@@ -3,6 +3,8 @@ package com.student.school.entity;
 import jakarta.persistence.*;
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Absent {
 
@@ -17,6 +19,7 @@ public class Absent {
 
     @ManyToOne
     @JoinColumn(name = "student_id")
+    @JsonIgnore
     private Student student;
 
     protected Absent() {}
