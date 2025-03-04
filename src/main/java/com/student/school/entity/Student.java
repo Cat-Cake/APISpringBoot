@@ -23,12 +23,13 @@ public class Student {
     private Classe classe;
 
     @OneToMany(mappedBy = "student")
+    @JsonManagedReference
     private List<Grade> grades;
 
     @OneToMany(mappedBy = "student")
     private List<Absent> absences;
 
-    protected Student() {}
+    public Student() {}
 
     public Student(String firstName, String lastName, String birthDate, Classe classe) {
         this.firstName = firstName;

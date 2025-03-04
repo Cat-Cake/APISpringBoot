@@ -22,8 +22,6 @@ public class Absent {
     @JsonIgnore
     private Student student;
 
-    protected Absent() {}
-
     public Absent(Date absentDate, String reason, Student student) {
         this.absentDate = absentDate;
         this.reason = reason;
